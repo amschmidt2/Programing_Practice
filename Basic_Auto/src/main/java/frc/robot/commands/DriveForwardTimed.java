@@ -4,17 +4,21 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveTrain;
 
-public class driveXboxJoysticks extends CommandBase {
-  private final DriveTrain driveTrain;
-  /** Creates a new driveXboxJoysticks. */
-  public driveXboxJoysticks(DriveTrain dt){
+public class DriveForwardTimed extends CommandBase {
+  DriveTrain driveTrain;
+  private boolean finish = false;
+  Timer timer;
+  
+  /** Creates a new DriveForwardTimed. */
+  public DriveForwardTimed() {
+    
     // Use addRequirements() here to declare subsystem dependencies.
-    driveTrain = dt;
-    addRequirements(driveTrain);
   }
+
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {}

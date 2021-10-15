@@ -19,4 +19,5 @@ public final class Constants {
 	public static final int RIGHT_FRONT = 0;
 	public static final int LEFT_BACK = 0;
 	public static final int RIGHT_BACK = 0;
-	public static final int XBOX_LEFT_X_AXIS = 0;}
+	public static final int XBOX_LEFT_X_AXIS = 0;
+	public static final double DRIVETRAINSPEED = 0.7;}
