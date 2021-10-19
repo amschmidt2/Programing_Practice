@@ -22,17 +22,26 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
+  private final ExampleCommand DriveForwardTimed = new ExampleCommand(m_exampleSubsystem);
 
   //Drivetrain declare
   private final DriveTrain driveTrain;
   private final DriveWithJoysticks driveWithJoystick;
-  private final DriveForwardTimed driveForwardTimed;
+  private final DriveForwardTimed DriveForwardTimed;
   public static XboxController driverJoystick;
   
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    // Configure the button bindings
+    driveTrain = new DriveTrain();
+    driveWithJoystick = new DriveWithJoysticks(driveTrain);
+    driveWithJoystick.addRequirements(driveTrain);
+    driveTrain.setDefaultCommand(driveWithJoystick);
+
+    driveForwardTimed = new DriveForwardTimed(driveTrain);
+    driveForwardTimed.addRequirements(driveTrain);
+
+    driverJoystick = new XboxController(Constants.JOYSTICK_NUMBER);
+   // Configure the button bindings
     configureButtonBindings();
   }
 
@@ -51,6 +60,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return m_autoCommand;
+    return driveForwardTimed;
   }
 }
