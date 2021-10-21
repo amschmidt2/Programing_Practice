@@ -22,14 +22,8 @@ public final class Constants {
 	public static final int RIGHT_FRONT = 1;
 	public static final int LEFT_BACK = 2;
 	public static final int RIGHT_BACK = 3;
-	private static final int XBOX_LEFT_Y_AXIS = 0;}
+	public static final int XBOX_LEFT_Y_AXIS = 0;
+	public static final int XBOX_LEFT_X_AXIS = 0;
+}
 //angie is awesome
 
-@Override
-public void periodic() {
-		//This method will be called once per scheduler run
-}
-public void drivewithJoysticks(XboxController controller, double speed)
-{
-	drive.arcadeDrive(controller.getRawAxis(Constants.XBOX_LEFT_Y_AXIS)*speed, controller.getRawAxis(Constants.XBOX_LEFT_X_AXIS)*speed);
-}
