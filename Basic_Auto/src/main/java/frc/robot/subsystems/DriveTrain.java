@@ -25,11 +25,11 @@ public class DriveTrain extends SubsystemBase {
     leftFront = new Spark(Constants.LEFT_FRONT);
     leftFront.setInverted(false);
     rightFront = new Spark(Constants.RIGHT_FRONT);
-    rightFront.setInverted(false);
+    rightFront.setInverted(true);
     leftBack = new Spark(Constants.LEFT_BACK);
     leftBack.setInverted(false);
     rightBack = new Spark(Constants.RIGHT_BACK);
-    rightBack.setInverted(false);
+    rightBack.setInverted(true);
 
     leftMotors = new SpeedControllerGroup(leftFront, leftBack);
     rightMotors = new SpeedControllerGroup(rightFront, rightBack);
