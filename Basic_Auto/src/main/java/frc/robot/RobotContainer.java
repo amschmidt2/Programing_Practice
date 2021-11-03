@@ -12,6 +12,7 @@ import frc.robot.commands.ShootBall;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Shooter;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -57,7 +58,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    
+    JoystickButton shootButton = new JoystickButton(driverJoystick,XboxController.Button.kBumperRight.value);
+    shootButton.whileHeld(new ShootBall(shooter));
   }
 
   /**
