@@ -18,5 +18,5 @@ public final class Constants {
 	public static final int LEFT_BACK = 1;
 	public static final int RIGHT_FRONT = 2;
 	public static final int LEFT_FRONT = 3;
-	public static final int XBOX_LEFT_Y_AXIS = 0;
+	public static final int XBOX_LEFT_Y_AXIS = 1;
 	public static final int XBOX_LEFT_X_AXIS = 0;}
