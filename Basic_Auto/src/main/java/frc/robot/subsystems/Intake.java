@@ -4,11 +4,16 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class Intake extends SubsystemBase {
+  Spark intake;
   /** Creates a new Intake. */
-  public Intake() {}
+  public Intake() {
+    intake = new Spark(Constants.INTAKE);
+  }
   //jnkhjnkhk
 
   @Override
