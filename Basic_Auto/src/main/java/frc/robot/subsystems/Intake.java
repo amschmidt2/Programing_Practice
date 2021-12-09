@@ -9,15 +9,12 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 public class Intake extends SubsystemBase {
-  Spark intake;
   /** Creates a new Intake. */
-  public Intake() {
-    intake = new Spark(Constants.INTAKE);
-  }
-  //jnkhjnkhk
+  Spark intake;
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+    intake = new Spark(Constants.INTAKE);
   }
 }
